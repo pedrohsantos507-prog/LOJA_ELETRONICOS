@@ -11,37 +11,44 @@
 
 </head>
 <body>
-    <div class="container">
-        <h1>Loja de eletronicos</h1>
-        
-        <form id="form-produtos">
-            <div class="form-group">
-                <label for="produto">produto:</label>
-                <input type="text" id="produto" required placeholder="Ex: Geladeira">
-            </div>
+    <form id="form-produtos">
 
-
-            <div class="form-group">
-                <label for="quantidade">quantidade:</label>
-                <input type="number" id="quantidade" required min="0" max="20" placeholder="Ex: 20">
-            </div>
-
-            <div class="form-group">
-                <label for="valor">Valor do eletronico: (R$):</label>
-                <input type="number" id="valor" required min="0" step="0.01" placeholder="Ex: 5000">
-            </div>
-
-            <button type="submit" id="btn-adicionar">Adicionar produto</button>
-        </form>
-
-        <h2>produtos cadastrados</h2>
-        <div class="table-container">
-            <table>
-                
-                <tbody id="lista-produtos">
-                    </tbody>
-            </table>
+        <div class="form-group">
+        <label for="produto">Produto:</label>
+        <input type="text" id="produto" required placeholder="Ex: Notebook">
         </div>
-    </div>
+        
+        <div class="form-group">
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" required min="0" placeholder="Ex: 10">
+        </div>
+        
+        <div class="form-group">
+        <label for="valor">Valor do produto (R$):</label>
+        <input type="number" id="valor" required min="0" step="0.01" placeholder="Ex: 2500">
+        </div>
+        
+        <button type="submit">
+        Adicionar produto
+        </button>
+        
+        </form>
+        
+        
+        <h2>Produtos cadastrados</h2>
+        
+        <table>
+        <thead>
+        <tr>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Valor</th>
+        </tr>
+        </thead>
+        
+        <tbody id="lista-produtos">
+        
+        </tbody>
+        </table>
 </body>
 </html>

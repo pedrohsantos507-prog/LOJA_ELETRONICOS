@@ -3,33 +3,45 @@ const listaProdutos = document.getElementById('lista-produtos');
 
 const listaDeProdutosCadastrados = [];
 
+
 formProdutos.addEventListener('submit', function(event) {
-    event.preventDefault(); 
 
-    const marca = document.getElementById('produto').value;
-    const modelo = document.getElementById('quantidade').value;
-    const valor = parseFloat(document.getElementById('valor').value);
+event.preventDefault();
 
 
-    listaDeProdutosCadastrados.push(novoProduto);
-    adicionarNaTabela(novoProduto);
+const nomeProduto = document.getElementById('produto').value;
+const quantidade = document.getElementById('quantidade').value;
+const valor = Number(document.getElementById('valor').value);
 
-    formProdutos.reset();
+
+const novoProduto = {
+nome: nomeProduto,
+quantidade: quantidade,
+valor: valor
+};
+
+
+listaDeProdutosCadastrados.push(novoProduto);
+
+adicionarNaTabela(novoProduto);
+
+
+formProdutos.reset();
+
 });
 
 
 function adicionarNaTabela(produto) {
-    const tr = document.createElement('tr');
 
-    const exibicaoIpva = produto.isento 
-        ? `<span class="isento">Isento</span>` 
-        : `R$ ${produto.valor.toFixed(2)}`;
+const tr = document.createElement('tr');
+ 
 
-    tr.innerHTML = `
-        <td>${produto}</td>
-        <td>${produto.quantidade}</td>
-        <td><strong>R$ ${produto.valorFinal.toFixed(2)}</strong></td>
-    `;
+tr.innerHTML = `
+<td>${produto.nome}</td>
+<td>${produto.quantidade}</td>
+<td>R$ ${produto.valor.toFixed(2)}</td>
+`;
 
-    listaProdutos.appendChild(tr);
-}
+
+listaProdutos.appendChild(tr);
+ }
