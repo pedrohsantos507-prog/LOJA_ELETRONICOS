@@ -33,7 +33,7 @@ h2 {
 }
 
 /* Formulário */
-#form-veiculo {
+#form-produto {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
@@ -113,22 +113,6 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #dee2e6;
-}
-
-th {
-    background-color: #f8f9fa;
-    color: #495057;
-    font-weight: 600;
-}
-
-tr:hover {
-    background-color: #f1f3f5;
 }
 
 .isento {
