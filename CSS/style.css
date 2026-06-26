@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+#geral {
+    background-color: white;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#geral h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#geral p {
+    margin-bottom: 8px;
+}
+
+#resultado{
+    background-color: white;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+#form-pessoa label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#form-pessoa input {
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+#form-pessoa button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#form-pessoa button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+#form-pessoa button[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+#div-lista-pessoas {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #999;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
