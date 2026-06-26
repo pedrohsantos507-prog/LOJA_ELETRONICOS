@@ -27,7 +27,7 @@ function adicionarNaTabela(produto) {
 
     tr.innerHTML = `
         <td>${produto}</td>
-        <td>${produto.quantidade} anos</td>
+        <td>${produto.quantidade}</td>
         <td><strong>R$ ${produto.valorFinal.toFixed(2)}</strong></td>
     `;
 
