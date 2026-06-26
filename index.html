@@ -11,25 +11,56 @@
 
 </head>
 <body>
-    <div id="geral">
-        <h1>Loja de eletronicos</h1>
+    <div class="container">
+        <h1>Cálculo de Seguro e IPVA Automotivo</h1>
+        
+        <form id="form-veiculo">
+            <div class="form-group">
+                <label for="produto">produto:</label>
+                <input type="text" id="produto" required placeholder="Ex: e.g. geladeira">
+            </div>
 
-        <form id="formulario">
-            <label for="produto">produto</label>
-            <input type="text" name="produto" id="produto">
 
-            <label for="valor">valor</label>
-            <input type="text" name="valor" id="valor">
+            <div class="form-group">
+                <label for="quantidade">quantidade:</label>
+                <input type="number" id="quantidade" required min="0" max="20" placeholder="Ex: 20">
+            </div>
 
-            <label for="quantidade">quantidade</label>
-            <input type="text" name="quantidade" id="quantidade">
+            <div class="form-group">
+                <label for="valor">Valor do eletrico: (R$):</label>
+                <input type="number" id="valor" required min="0" step="0.01" placeholder="Ex: 50000">
+            </div>
 
-            <button type="submit">adicionar</button>
-            <button type="reset">limpar</button>
+            <div class="form-group">
+                <label>Tipo de produto:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="combustivel" value="gasolina" checked> Gasolina</label>
+                    <label><input type="radio" name="combustivel" value="etanol"> Etanol</label>
+                    <label><input type="radio" name="combustivel" value="bi"> Bicombustível</label>
+                    <label><input type="radio" name="combustivel" value="hibrido"> Híbrido</label>
+                    <label><input type="radio" name="combustivel" value="eletrico"> Elétrico</label>
+                </div>
+            </div>
+
+            <button type="submit" id="btn-adicionar">Adicionar Veículo</button>
         </form>
 
-        <div id="resultado">
-
+        <h2>Veículos Cadastrados</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Placa</th>
+                        <th>Marca / Modelo</th>
+                        <th>Idade</th>
+                        <th>Seguro (10%)</th>
+                        <th>IPVA</th>
+                        <th>Valor Final</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-veiculos">
+                    </tbody>
+            </table>
         </div>
     </div>
 </body>
